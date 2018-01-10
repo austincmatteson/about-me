@@ -12,13 +12,16 @@ reveal how they did
 */
 
 //define variables
-var currentAnswer, allAnswers, realAnswers, i;
+var userName, currentAnswer, allAnswers, realAnswers, i;
 i = 0;
 allAnswers = [];
 realAnswers = [];
 
 //start questions
 alert('Hey, welcome to my site. My name is Austin Matteson but you may already know that. In fact, let\'s find out just how much you do know about me with five yes or no questions.');
+userName = prompt('But first, what is your name?');
+console.log(userName);
+alert('Great name, ' + userName + ', let\'s begin the test!');
 
 //question 1
 while (i < 1) {
@@ -177,4 +180,4 @@ for (; i < 5; i++) {
     score++;
   }
 }
-alert('You\'re answers of ' + allAnswers + ' means you got ' + score + ' out of 5 right. Enjoy the site!');
+alert(userName + ', you\'re answers of ' + allAnswers + ' mean you got ' + score + ' out of 5 right. Enjoy the site!');
