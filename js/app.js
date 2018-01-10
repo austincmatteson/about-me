@@ -1,40 +1,39 @@
 'use strict';
 
-// var userName = prompt('Hi, What is your name?');
+/* 
+define variables for use 
+alert that questions will start 
+ask, save, covert to correct case, log, respond (5x)
+*/
 
-// var pets = parseInt(prompt('How many pets do you think I have?'));
+//define variable array to store inputted user answers to yes/no questions
+var currentAnswer, allAnswers, i;
+i = 0;
+allAnswers = [];
 
-//PSEUDOCODE
-// if(user gues the correct number) {
-//   tell the user they were correct
-// } else {
-//   tell the user they were wrong
-// }
-
-// if(pets === 2){
-//   alert('That is correct!');
-// } else{
-//   alert('No, that is incorrect.');
-// }
-
-// Question about age
-// var alliesAge = prompt('Do you think I\'m older than 30? Answer with Y or N.').toUpperCase();
-
-// if(alliesAge === 'Y') {
-//   alert('Yes, I\'m older than 30.');
-// } else if(alliesAge === 'N') {
-//   alert('Thank you, I\'m flattered.');
-// } else {
-//   alert('Please enter Y or N');
-// }
-
-// var arrayOfDogs = ['Gary', 'Charlotte', 'Demi', 'Bird', 'Mr. Darcy'];
-// arrayOfDogs[5] = 'Whiskey';
-// arrayOfDogs[5] = 'Holly';
-// console.log(arrayOfDogs.length);
-// arrayOfDogs.push('Toto');
-// console.log(arrayOfDogs.length);
-// arrayOfDogs.pop();
-// arrayOfDogs.unshift('Holly);
-// arrayOfDogs.shift('Holly);
-// console.log(arrayOfDogs);
+//start questions
+while (i < 1) {
+  alert('Hey, welcome to my site. My name is Austin Matteson but you may already know that. In fact, let\'s find out just how much you do know about me with five yes or no questions.');
+  currentAnswer = prompt('Was I born in Washington?');
+  currentAnswer = currentAnswer.toLowerCase();
+  if (currentAnswer === 'yes') {
+    currentAnswer = 'y';
+  } else if (currentAnswer === 'no') {
+    currentAnswer = 'n';
+  }
+  
+  if (currentAnswer === 'y' || currentAnswer === 'n') { 
+    console.log(currentAnswer);
+    allAnswers.push(currentAnswer);
+    console.log(allAnswers);
+    i++;
+  } else {
+    alert('Please answer with a yes or no response.')
+  }
+}
+if (allAnswers[0] === 'y') {
+  alert('Correct!');
+} else {
+  alert('Incorrect.');
+}
+i--;
