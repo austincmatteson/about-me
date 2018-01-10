@@ -1,4 +1,12 @@
 h1{
-  background-color: red;
   font-size: 50px;
+  text-align: center;
+}
+h2{
+  font-size: 25px;
+  margin: 25px;
+}
+ol{
+  list-style-type: upper-roman;
+  margin: 50px;
 }
