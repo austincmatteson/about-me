@@ -12,9 +12,10 @@ reveal how they did
 */
 
 //define variables
-var userName, currentAnswer, allAnswers, realAnswers, questionTries, i;
+var userName, currentAnswer, allAnswers, realAnswers, questionTries, cousins, i;
 i = 0;
 questionTries = 4;
+cousins = 3;
 allAnswers = [];
 realAnswers = [];
 
@@ -178,7 +179,7 @@ i--;
 while (i < questionTries) {
   currentAnswer = parseInt(prompt('Try and guess how many first cousins I have.'));
   console.log(currentAnswer);
-  if (currentAnswer === 3) {
+  if (currentAnswer === cousins) {
     alert('Correct, 3. And it only took you ' + (i + 1) + ' attempt(s).');
     allAnswers.push(currentAnswer);
     console.log(allAnswers);
@@ -186,10 +187,10 @@ while (i < questionTries) {
     console.log(realAnswers);
     i = 0;
     break;
-  } else if (currentAnswer > 3) {
+  } else if (currentAnswer > cousins) {
     i++;
     alert('That is too high. You have ' + (questionTries - i) + ' attempt(s) left.');
-  } else if (currentAnswer < 3) {
+  } else if (currentAnswer < cousins) {
     i++;
     alert('That is too low. You have ' + (questionTries - i) + ' attempt(s) left.');
   } else {
@@ -208,7 +209,7 @@ if (i === questionTries) {
 //user scorecard
 var score = 0;
 for (; i < realAnswers.length; i++) {
-  if (realAnswers[i] === 'Correct'){
+  if (realAnswers[i] === 'Correct') {
     score++;
   }
 }
