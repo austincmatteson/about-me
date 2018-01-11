@@ -21,44 +21,46 @@ realAnswers = [];
 countries = ['canada', 'mexico', 'portugal'];
 
 //start questions
-alert('Hey, welcome to my site. My name is Austin Matteson but you may already know that. In fact, let\'s find out just how much you do know about me.');
 
 function person() {
   userName = prompt('But first, what is your name?');
   console.log('The user entered', userName);
   alert('Great name, ' + userName + ', let\'s begin the test!');
 }
-person();
 //question 1
-while (i < 1) {
-  currentAnswer = prompt('Was I born in Washington?');
-  currentAnswer = currentAnswer.toLowerCase();
-  if (currentAnswer === 'y') {
-    currentAnswer = 'yes';
-  } else if (currentAnswer === 'n') {
-    currentAnswer = 'no';
+function placeOfBirth() {
+  while (i < 1) {
+    currentAnswer = prompt('Was I born in Washington?');
+    currentAnswer = currentAnswer.toLowerCase();
+    if (currentAnswer === 'y') {
+      currentAnswer = 'yes';
+    } else if (currentAnswer === 'n') {
+      currentAnswer = 'no';
+    }
+    if (currentAnswer === 'yes' || currentAnswer === 'no') {
+      console.log('The user entered', currentAnswer);
+      allAnswers.push(currentAnswer);
+      console.log('Current answer history', allAnswers);
+      i++;
+    } else {
+      alert('Please answer with a yes or no response.');
+    }
   }
-
-  if (currentAnswer === 'yes' || currentAnswer === 'no') {
-    console.log('The user entered', currentAnswer);
-    allAnswers.push(currentAnswer);
-    console.log('Current answer history', allAnswers);
-    i++;
+  if (allAnswers[0] === 'no') {
+    alert('Correct!');
+    realAnswers.push('Correct');
+    console.log('Current user grade', realAnswers);
   } else {
-    alert('Please answer with a yes or no response.');
+    alert('Incorrect.');
+    realAnswers.push('Incorrect');
+    console.log('Current user grade', realAnswers);
   }
+  i--;
 }
-if (allAnswers[0] === 'no') {
-  alert('Correct!');
-  realAnswers.push('Correct');
-  console.log('Current user grade', realAnswers);
-} else {
-  alert('Incorrect.');
-  realAnswers.push('Incorrect');
-  console.log('Current user grade', realAnswers);
-}
-i--;
 
+alert('Hey, welcome to my site. My name is Austin Matteson but you may already know that. In fact, let\'s find out just how much you do know about me.');
+person();
+placeOfBirth();
 //question 2
 while (i < 1) {
   currentAnswer = prompt('Have I been skydiving?');
