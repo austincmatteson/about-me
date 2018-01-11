@@ -22,10 +22,13 @@ countries = ['canada', 'mexico', 'portugal'];
 
 //start questions
 alert('Hey, welcome to my site. My name is Austin Matteson but you may already know that. In fact, let\'s find out just how much you do know about me.');
-userName = prompt('But first, what is your name?');
-console.log('The user entered', userName);
-alert('Great name, ' + userName + ', let\'s begin the test!');
 
+function person() {
+  userName = prompt('But first, what is your name?');
+  console.log('The user entered', userName);
+  alert('Great name, ' + userName + ', let\'s begin the test!');
+}
+person();
 //question 1
 while (i < 1) {
   currentAnswer = prompt('Was I born in Washington?');
