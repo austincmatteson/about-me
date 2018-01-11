@@ -22,7 +22,7 @@ realAnswers = [];
 //start questions
 alert('Hey, welcome to my site. My name is Austin Matteson but you may already know that. In fact, let\'s find out just how much you do know about me.');
 userName = prompt('But first, what is your name?');
-console.log(userName);
+console.log('The user entered', userName);
 alert('Great name, ' + userName + ', let\'s begin the test!');
 
 //question 1
@@ -36,9 +36,9 @@ while (i < 1) {
   }
 
   if (currentAnswer === 'yes' || currentAnswer === 'no') {
-    console.log(currentAnswer);
+    console.log('The user entered', currentAnswer);
     allAnswers.push(currentAnswer);
-    console.log(allAnswers);
+    console.log('Current answer history', allAnswers);
     i++;
   } else {
     alert('Please answer with a yes or no response.');
@@ -47,11 +47,11 @@ while (i < 1) {
 if (allAnswers[0] === 'no') {
   alert('Correct!');
   realAnswers.push('Correct');
-  console.log(realAnswers);
+  console.log('Current user grade', realAnswers);
 } else {
   alert('Incorrect.');
   realAnswers.push('Incorrect');
-  console.log(realAnswers);
+  console.log('Current user grade', realAnswers);
 }
 i--;
 
@@ -66,9 +66,9 @@ while (i < 1) {
   }
 
   if (currentAnswer === 'yes' || currentAnswer === 'no') {
-    console.log(currentAnswer);
+    console.log('The user entered', currentAnswer);
     allAnswers.push(currentAnswer);
-    console.log(allAnswers);
+    console.log('Current answer history', allAnswers);
     i++;
   } else {
     alert('Please answer with a yes or no response.');
@@ -77,11 +77,11 @@ while (i < 1) {
 if (allAnswers[1] === 'no') {
   alert('Correct!');
   realAnswers.push('Correct');
-  console.log(realAnswers);
+  console.log('Current user grade', realAnswers);
 } else {
   alert('Incorrect.');
   realAnswers.push('Incorrect');
-  console.log(realAnswers);
+  console.log('Current user grade', realAnswers);
 }
 i--;
 
@@ -96,9 +96,9 @@ while (i < 1) {
   }
 
   if (currentAnswer === 'yes' || currentAnswer === 'no') {
-    console.log(currentAnswer);
+    console.log('The user entered', currentAnswer);
     allAnswers.push(currentAnswer);
-    console.log(allAnswers);
+    console.log('Current answer history', allAnswers);
     i++;
   } else {
     alert('Please answer with a yes or no response.');
@@ -107,11 +107,11 @@ while (i < 1) {
 if (allAnswers[2] === 'yes') {
   alert('Correct!');
   realAnswers.push('Correct');
-  console.log(realAnswers);
+  console.log('Current user grade', realAnswers);
 } else {
   alert('Incorrect.');
   realAnswers.push('Incorrect');
-  console.log(realAnswers);
+  console.log('Current user grade', realAnswers);
 }
 i--;
 
@@ -126,9 +126,9 @@ while (i < 1) {
   }
 
   if (currentAnswer === 'yes' || currentAnswer === 'no') {
-    console.log(currentAnswer);
+    console.log('The user entered', currentAnswer);
     allAnswers.push(currentAnswer);
-    console.log(allAnswers);
+    console.log('Current answer history', allAnswers);
     i++;
   } else {
     alert('Please answer with a yes or no response.');
@@ -137,11 +137,11 @@ while (i < 1) {
 if (allAnswers[3] === 'yes') {
   alert('Correct!');
   realAnswers.push('Correct');
-  console.log(realAnswers);
+  console.log('Current user grade', realAnswers);
 } else {
   alert('Incorrect.');
   realAnswers.push('Incorrect');
-  console.log(realAnswers);
+  console.log('Current user grade', realAnswers);
 }
 i--;
 
@@ -156,9 +156,9 @@ while (i < 1) {
   }
 
   if (currentAnswer === 'yes' || currentAnswer === 'no') {
-    console.log(currentAnswer);
+    console.log('The user entered', currentAnswer);
     allAnswers.push(currentAnswer);
-    console.log(allAnswers);
+    console.log('Current answer history', allAnswers);
     i++;
   } else {
     alert('Please answer with a yes or no response.');
@@ -167,24 +167,24 @@ while (i < 1) {
 if (allAnswers[4] === 'yes') {
   alert('Correct!');
   realAnswers.push('Correct');
-  console.log(realAnswers);
+  console.log('Current user grade', realAnswers);
 } else {
   alert('Incorrect.');
   realAnswers.push('Incorrect');
-  console.log(realAnswers);
+  console.log('Current user grade', realAnswers);
 }
 i--;
 
 //question 6, multiple chance guess the number
 while (i < questionTries) {
   currentAnswer = parseInt(prompt('Try and guess how many first cousins I have.'));
-  console.log(currentAnswer);
+  console.log('The user entered', currentAnswer);
   if (currentAnswer === cousins) {
     alert('Correct, 3. And it only took you ' + (i + 1) + ' attempt(s).');
     allAnswers.push(currentAnswer);
-    console.log(allAnswers);
+    console.log('Current answer history', allAnswers);
     realAnswers.push('Correct');
-    console.log(realAnswers);
+    console.log('Current user grade', realAnswers);
     i = 0;
     break;
   } else if (currentAnswer > cousins) {
@@ -201,10 +201,14 @@ while (i < questionTries) {
 if (i === questionTries) {
   alert('Too many failed attempts. The correct answer was 3.');
   realAnswers.push('Incorrect');
-  console.log(realAnswers);
+  console.log('Current user grade', realAnswers);
   allAnswers.push('not 3');
+  console.log('Current answer history', allAnswers);
   i = 0;
 }
+
+//question 7
+
 
 //user scorecard
 var score = 0;
