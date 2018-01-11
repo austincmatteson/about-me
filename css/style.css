@@ -10,3 +10,10 @@ ol{
   list-style-type: upper-roman;
   margin: 50px;
 }
+ul{
+  list-style-type: square;
+  margin: 50px;
+}
+p{
+  margin: 50px;
+}
