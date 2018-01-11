@@ -237,7 +237,8 @@ while (i < questionTries) {
     console.log('Current user grade', realAnswers);
   }
 }
-alert('I have been to the following: '+ countries);
+alert('I have been to the following: ' + countries);
+i = 0;
 
 //user scorecard
 var score = 0;
