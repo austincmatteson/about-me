@@ -12,12 +12,13 @@ reveal how they did
 */
 
 //define variables
-var userName, currentAnswer, allAnswers, realAnswers, questionTries, cousins, i;
+var userName, currentAnswer, allAnswers, realAnswers, questionTries, cousins, countries, i;
 i = 0;
 questionTries = 4;
 cousins = 3;
 allAnswers = [];
 realAnswers = [];
+countries = ['canada', 'mexico', 'portugal'];
 
 //start questions
 alert('Hey, welcome to my site. My name is Austin Matteson but you may already know that. In fact, let\'s find out just how much you do know about me.');
@@ -208,7 +209,35 @@ if (i === questionTries) {
 }
 
 //question 7
-
+questionTries = 6;
+while (i < questionTries) {
+  var x = 0;
+  currentAnswer = prompt('Name a country I\'ve been to that is not the United States. You have six tries for this one.');
+  currentAnswer = currentAnswer.toLowerCase();
+  console.log('The user entered', currentAnswer);
+  for (x = 0; x < countries.length; x++) {
+    if (currentAnswer === countries[x]) {
+      alert('Correct!');
+      allAnswers.push(currentAnswer);
+      console.log('Current answer history', allAnswers);
+      realAnswers.push('Correct');
+      console.log('Current user grade', realAnswers);
+      break;
+    }
+  }
+  if (x < countries.length) {
+    break;
+  }
+  i++;
+  alert('Unfortunately not. You have ' + (questionTries - i) + ' attempt(s) left.');
+  if (i === questionTries) {
+    allAnswers.push('not canada, mexico, or portugal');
+    console.log('Current answer history', allAnswers);
+    realAnswers.push('Incorrect');
+    console.log('Current user grade', realAnswers);
+  }
+}
+alert('I have been to the following: '+ countries);
 
 //user scorecard
 var score = 0;
